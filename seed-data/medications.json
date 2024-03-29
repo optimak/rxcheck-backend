@@ -1,0 +1,724 @@
+[
+    {
+        "name": "Metformin",
+        "active_ingredient": "Metformin",
+        "indications": "Management of type 2 diabetes",
+        "side_effects": "Nausea, Diarrhea",
+        "food_interactions": "Limit alcohol intake to reduce risk of lactic acidosis.",
+        "contra_indications": "Severe kidney disease, Metabolic acidosis"
+    },
+    {
+        "name": "Nexium",
+        "active_ingredient": "Esomeprazole",
+        "indications": "Treatment of gastroesophageal reflux disease (GERD), gastric ulcers",
+        "side_effects": "Headache, Nausea",
+        "contra_indications": "Allergy to esomeprazole"
+    },
+
+    {
+        "name": "Zyrtec",
+        "active_ingredient": "Cetirizine",
+        "indications": "Relief of allergy symptoms, such as hay fever and hives",
+        "side_effects": "Drowsiness, Dry mouth",
+        "contra_indications": "Severe kidney disease"
+    },
+    {
+        "name": "Claritin",
+        "active_ingredient": "Loratadine",
+        "indications": "Relief of allergy symptoms, such as hay fever and hives",
+        "side_effects": "Headache, Dry mouth",
+        "contra_indications": "Severe liver impairment"
+    },
+    {
+        "name": "Crestor",
+        "active_ingredient": "Rosuvastatin",
+        "indications": "Lowering cholesterol levels",
+        "side_effects": "Muscle pain, Rarely, liver damage",
+        "food_interactions": "Avoid grapefruit juice, which increases risk of side effects.",
+        "contra_indications": "Liver disease, Pregnancy"
+    },
+    {
+        "name": "Zocor",
+        "active_ingredient": "Simvastatin",
+        "indications": "Lowering cholesterol levels",
+        "side_effects": "Muscle pain, Rarely, liver damage",
+        "food_interactions": "Avoid grapefruit juice, which increases risk of side effects.",
+        "contra_indications": "Liver disease, Pregnancy"
+    },
+    {
+        "name": "Prednisone",
+        "active_ingredient": "Prednisone",
+        "indications": "Management of inflammatory and autoimmune conditions",
+        "side_effects": "Weight gain, Insomnia",
+        "food_interactions": "Avoid grapefruit juice, which may increase side effects.",
+        "contra_indications": "Active infections"
+    },
+
+    {
+        "name": "Lasix",
+        "active_ingredient": "Furosemide",
+        "indications": "Treatment of edema, high blood pressure",
+        "side_effects": "Dehydration, Dizziness",
+        "food_interactions": "Monitor potassium levels.",
+        "contra_indications": "Anuria"
+    },
+    {
+        "name": "Prilosec",
+        "active_ingredient": "Omeprazole",
+        "indications": "Treatment of gastroesophageal reflux disease (GERD), gastric ulcers",
+        "side_effects": "Headache, Nausea",
+        "contra_indications": "Allergy to omeprazole, Liver disease"
+    },
+    {
+        "name": "Cymbalta",
+        "active_ingredient": "Duloxetine",
+        "indications": "Treatment of depression, generalized anxiety disorder, fibromyalgia",
+        "side_effects": "Nausea, Dry mouth",
+        "contra_indications": "Monoamine oxidase inhibitors (MAOIs)"
+    },
+    {
+        "name": "Ritalin",
+        "active_ingredient": "Methylphenidate",
+        "indications": "Treatment of attention deficit hyperactivity disorder (ADHD), narcolepsy",
+        "side_effects": "Insomnia, Loss of appetite",
+        "contra_indications": "Glaucoma, Severe anxiety"
+    },
+    {
+        "name": "Fosamax",
+        "active_ingredient": "Alendronate",
+        "indications": "Treatment of osteoporosis, Pagets disease of bone",
+        "side_effects": "Heartburn, Difficulty swallowing",
+        "food_interactions": "Take with a full glass of water, remain upright for at least 30 minutes.",
+        "contra_indications": "Hypocalcemia"
+    },
+    {
+        "name": "Klonopin",
+        "active_ingredient": "Clonazepam",
+        "indications": "Treatment of panic disorder, seizure disorders",
+        "side_effects": "Drowsiness, Dizziness",
+        "food_interactions": "Alcohol enhances effects.",
+        "contra_indications": "Narrow-angle glaucoma"
+    },
+    {
+        "name": "Effexor",
+        "active_ingredient": "Venlafaxine",
+        "indications": "Treatment of depression, generalized anxiety disorder",
+        "side_effects": "Insomnia, Nausea",
+        "contra_indications": "Monoamine oxidase inhibitors (MAOIs)"
+    },
+    {
+        "name": "Celebrex",
+        "active_ingredient": "Celecoxib",
+        "indications": "Relief of pain, reducing inflammation",
+        "side_effects": "Heartburn, Stomach pain",
+        "contra_indications": "History of allergic reaction to sulfonamides"
+    },
+    {
+        "name": "Topamax",
+        "active_ingredient": "Topiramate",
+        "indications": "Treatment of seizures, migraine prevention",
+        "side_effects": "Fatigue, Dizziness",
+        "contra_indications": "Metabolic acidosis"
+    },
+    {
+        "name": "Zantac",
+        "active_ingredient": "Ranitidine",
+        "indications": "Treatment of ulcers, gastroesophageal reflux disease (GERD)",
+        "side_effects": "Headache, Constipation",
+        "contra_indications": "Allergy to ranitidine"
+    },
+    {
+        "name": "Tramadol",
+        "active_ingredient": "Tramadol",
+        "indications": "Relief of moderate to severe pain",
+        "side_effects": "Nausea, Dizziness",
+        "contra_indications": "Respiratory depression, Seizures"
+    },
+    {
+        "name": "Lyrica",
+        "active_ingredient": "Pregabalin",
+        "indications": "Treatment of neuropathic pain, fibromyalgia, seizures",
+        "side_effects": "Dizziness, Drowsiness",
+        "contra_indications": "Heart failure, History of angioedema"
+    },
+    {
+        "name": "Ambien CR",
+        "active_ingredient": "Zolpidem",
+        "indications": "Treatment of insomnia",
+        "side_effects": "Drowsiness, Dizziness",
+        "food_interactions": "Avoid alcohol.",
+        "contra_indications": "Respiratory depression"
+    },
+
+    {
+        "name": "Robitussin",
+        "active_ingredient": "Dextromethorphan",
+        "indications": "Relief of cough",
+        "side_effects": "Drowsiness, Dizziness",
+        "contra_indications": "Respiratory depression, MAOIs"
+    },
+    {
+        "name": "Atarax",
+        "active_ingredient": "Hydroxyzine",
+        "indications": "Treatment of anxiety, itching",
+        "side_effects": "Drowsiness, Dry mouth",
+        "contra_indications": "Narrow-angle glaucoma"
+    },
+    {
+        "name": "Flexeril",
+        "active_ingredient": "Cyclobenzaprine",
+        "indications": "Treatment of muscle spasms",
+        "side_effects": "Drowsiness, Dry mouth",
+        "contra_indications": "Heart conduction abnormalities, Hyperthyroidism"
+    },
+    {
+        "name": "Flonase",
+        "active_ingredient": "Fluticasone",
+        "indications": "Relief of allergy symptoms, nasal congestion",
+        "side_effects": "Nosebleeds, Sore throat",
+        "contra_indications": "Active infections, Allergy to fluticasone"
+    },
+    {
+        "name": "Singulair",
+        "active_ingredient": "Montelukast",
+        "indications": "Treatment of asthma, allergic rhinitis",
+        "side_effects": "Headache, Abdominal pain",
+        "contra_indications": "Acute asthma attack"
+    },
+    {
+        "name": "Allegra",
+        "active_ingredient": "Fexofenadine",
+        "indications": "Relief of allergy symptoms, such as hay fever and hives",
+        "side_effects": "Headache, Nausea",
+        "contra_indications": "Severe kidney disease"
+    },
+    {
+        "name": "Paxil",
+        "active_ingredient": "Paroxetine",
+        "indications": "Treatment of depression, generalized anxiety disorder",
+        "side_effects": "Insomnia, Nausea",
+        "contra_indications": "Monoamine oxidase inhibitors (MAOIs)"
+    },
+    {
+        "name": "Benadryl",
+        "active_ingredient": "Diphenhydramine",
+        "indications": "Relief of allergy symptoms, such as itching and sneezing",
+        "side_effects": "Drowsiness, Dry mouth",
+        "contra_indications": "Severe liver disease"
+    },
+
+    {
+        "name": "Metoprolol",
+        "active_ingredient": "Metoprolol",
+        "indications": "Treatment of high blood pressure, angina, heart failure",
+        "side_effects": "Fatigue, Dizziness",
+        "contra_indications": "Bradycardia"
+    },
+    {
+        "name": "Levaquin",
+        "active_ingredient": "Levofloxacin",
+        "indications": "Treatment of bacterial infections",
+        "side_effects": "Nausea, Diarrhea",
+        "contra_indications": "Tendonitis"
+    },
+    {
+        "name": "Lexapro",
+        "active_ingredient": "Escitalopram",
+        "indications": "Treatment of depression, generalized anxiety disorder",
+        "side_effects": "Insomnia, Nausea",
+        "contra_indications": "Monoamine oxidase inhibitors (MAOIs)"
+    },
+    {
+        "name": "Ativan",
+        "active_ingredient": "Lorazepam",
+        "indications": "Treatment of anxiety disorders, seizures",
+        "side_effects": "Drowsiness, Dizziness",
+        "food_interactions": "Alcohol enhances effects.",
+        "contra_indications": "Narrow-angle glaucoma"
+    },
+    {
+        "name": "Tums",
+        "active_ingredient": "Calcium carbonate",
+        "indications": "Relief of heartburn, indigestion",
+        "side_effects": "Constipation, Gas",
+        "contra_indications": "Hypercalcemia"
+    },
+
+    {
+        "name": "Xanax",
+        "active_ingredient": "Alprazolam",
+        "indications": "Treatment of anxiety disorders, panic disorder",
+        "side_effects": "Drowsiness, Dizziness",
+        "food_interactions": "Alcohol enhances effects.",
+        "contra_indications": "Narrow-angle glaucoma"
+    },
+    {
+        "name": "Propecia",
+        "active_ingredient": "Finasteride",
+        "indications": "Treatment of male pattern baldness",
+        "side_effects": "Erectile dysfunction, Decreased libido",
+        "contra_indications": "Pregnancy"
+    },
+ 
+    {
+        "name": "Voltaren",
+        "active_ingredient": "Diclofenac",
+        "indications": "Relief of pain, reducing inflammation",
+        "side_effects": "Stomach irritation, Ulcers",
+        "contra_indications": "History of stomach ulcers, Asthma"
+    },
+    {
+        "name": "Diflucan",
+        "active_ingredient": "Fluconazole",
+        "indications": "Treatment of fungal infections",
+        "side_effects": "Nausea, Diarrhea, Headache",
+        "contra_indications": "Allergy to azoles, Liver disease"
+    },
+ 
+    {
+        "name": "Vicodin",
+        "active_ingredient": "Hydrocodone and Acetaminophen",
+        "indications": "Relief of moderate to severe pain",
+        "side_effects": "Drowsiness, Constipation",
+        "food_interactions": "Avoid alcohol.",
+        "contra_indications": "Respiratory depression, Liver disease"
+    },
+    {
+        "name": "Prinivil",
+        "active_ingredient": "Lisinopril",
+        "indications": "Treatment of high blood pressure, heart failure",
+        "side_effects": "Dizziness, Persistent dry cough",
+        "food_interactions": "Avoid potassium supplements or salt substitutes containing potassium.",
+        "contra_indications": "Pregnancy, Previous angioedema with ACE inhibitor use"
+    },
+    {
+        "name": "Prilosec OTC",
+        "active_ingredient": "Omeprazole",
+        "indications": "Treatment of gastroesophageal reflux disease (GERD), gastric ulcers",
+        "side_effects": "Headache, Nausea",
+        "contra_indications": "Allergy to omeprazole, Liver disease"
+    },
+
+    {
+        "name": "Naprosyn",
+        "active_ingredient": "Naproxen",
+        "indications": "Pain relief, reducing inflammation, reducing fever",
+        "side_effects": "Stomach irritation, Ulcers with prolonged use",
+        "contra_indications": "History of stomach ulcers, Asthma"
+    },
+    {
+        "name": "Lopressor",
+        "active_ingredient": "Metoprolol",
+        "indications": "Treatment of high blood pressure, angina, heart failure",
+        "side_effects": "Fatigue, Dizziness",
+        "contra_indications": "Bradycardia"
+    },
+    {
+        "name": "Cipro",
+        "active_ingredient": "Ciprofloxacin",
+        "indications": "Treatment of bacterial infections",
+        "side_effects": "Nausea, Diarrhea",
+        "contra_indications": "Tendonitis"
+    },
+    {
+        "name": "Flagyl",
+        "active_ingredient": "Metronidazole",
+        "indications": "Treatment of bacterial and protozoal infections",
+        "side_effects": "Nausea, Metallic taste",
+        "food_interactions": "Avoid alcohol, which causes a severe reaction.",
+        "contra_indications": "Pregnancy"
+    },
+    {
+        "name": "Synthroid",
+        "active_ingredient": "Levothyroxine",
+        "indications": "Treatment of hypothyroidism",
+        "side_effects": "Weight loss, Palpitations",
+        "food_interactions": "Avoid soy products, which may decrease absorption.",
+        "contra_indications": "Thyrotoxicosis, overactive thyroid"
+    },
+ 
+    {
+        "name": "Celexa",
+        "active_ingredient": "Citalopram",
+        "indications": "Treatment of depression, panic disorder",
+        "side_effects": "Nausea, Insomnia",
+        "contra_indications": "Monoamine oxidase inhibitors (MAOIs)"
+    },
+    {
+        "name": "Hydrochlorothiazide",
+        "active_ingredient": "Hydrochlorothiazide",
+        "indications": "Treatment of high blood pressure, edema",
+        "side_effects": "Dizziness, Electrolyte imbalances",
+        "contra_indications": "Anuria"
+    },
+    {
+        "name": "Motrin",
+        "active_ingredient": "Ibuprofen",
+        "indications": "Pain relief, reducing inflammation, reducing fever",
+        "side_effects": "Stomach irritation, Ulcers with prolonged use",
+        "contra_indications": "History of stomach ulcers, Asthma"
+    },
+    {
+        "name": "Glucophage XR",
+        "active_ingredient": "Metformin",
+        "indications": "Management of type 2 diabetes",
+        "side_effects": "Nausea, Diarrhea",
+        "food_interactions": "Limit alcohol intake to reduce risk of lactic acidosis.",
+        "contra_indications": "Severe kidney disease, Metabolic acidosis"
+    },
+    {
+        "name": "Augmentin",
+        "active_ingredient": "Amoxicillin and Clavulanate",
+        "indications": "Treatment of bacterial infections",
+        "side_effects": "Diarrhea, Nausea",
+        "contra_indications": "Allergy to penicillin, Infectious mononucleosis"
+    },
+
+    {
+        "name": "Warfarin",
+        "active_ingredient": "Warfarin",
+        "indications": "Prevention of blood clots",
+        "side_effects": "Risk of bleeding, Easy bruising",
+        "food_interactions": "Avoid large changes in vitamin K intake, such as leafy greens.",
+        "contra_indications": "Bleeding disorders, High risk of falls"
+    },
+ 
+
+    {
+        "name": "Deltasone",
+        "active_ingredient": "Prednisone",
+        "indications": "Management of inflammatory and autoimmune conditions",
+        "side_effects": "Weight gain, Insomnia",
+        "food_interactions": "Avoid grapefruit juice, which may increase side effects.",
+        "contra_indications": "Active infections"
+    },
+ 
+    {
+        "name": "Norvasc",
+        "active_ingredient": "Amlodipine",
+        "indications": "Treatment of high blood pressure, angina",
+        "side_effects": "Peripheral edema, Dizziness",
+        "contra_indications": "Hypotension"
+    },
+  
+    {
+        "name": "Aspirin",
+        "active_ingredient": "Aspirin",
+        "indications": "Pain relief, fever reduction, antiplatelet",
+        "side_effects": "Stomach irritation, Bleeding",
+        "contra_indications": "Bleeding disorders"
+    },
+  
+   
+    {
+        "name": "Valium",
+        "active_ingredient": "Diazepam",
+        "indications": "Treatment of anxiety, seizures, alcohol withdrawal",
+        "side_effects": "Drowsiness, Dizziness",
+        "food_interactions": "Alcohol enhances effects.",
+        "contra_indications": "Narrow-angle glaucoma"
+    },
+    {
+        "name": "Prozac",
+        "active_ingredient": "Fluoxetine",
+        "indications": "Treatment of depression, anxiety disorders, bulimia nervosa",
+        "side_effects": "Insomnia, Nausea",
+        "contra_indications": "Monoamine oxidase inhibitors (MAOIs)"
+    },
+    {
+        "name": "Claritin-D",
+        "active_ingredient": "Loratadine and Pseudoephedrine",
+        "indications": "Relief of allergy symptoms, nasal congestion",
+        "side_effects": "Headache, Dry mouth",
+        "contra_indications": "Severe liver impairment"
+    },
+
+ 
+    {
+        "name": "Tylenol",
+        "active_ingredient": "Acetaminophen",
+        "indications": "Relief of minor aches and pains, reducing fever",
+        "side_effects": "Nausea, Liver damage at high doses",
+        "contra_indications": "Liver disease, Regular alcohol consumption"
+    },
+
+    {
+        "name": "Zestril",
+        "active_ingredient": "Lisinopril",
+        "indications": "Treatment of high blood pressure, heart failure",
+        "side_effects": "Dizziness, Persistent dry cough",
+        "food_interactions": "Avoid potassium supplements or salt substitutes containing potassium.",
+        "contra_indications": "Pregnancy, Previous angioedema with ACE inhibitor use"
+    },
+    {
+        "name": "Glucophage",
+        "active_ingredient": "Metformin",
+        "indications": "Management of type 2 diabetes",
+        "side_effects": "Nausea, Diarrhea",
+        "food_interactions": "Limit alcohol intake to reduce risk of lactic acidosis.",
+        "contra_indications": "Severe kidney disease, Metabolic acidosis"
+    },
+    {
+        "name": "Amoxil",
+        "active_ingredient": "Amoxicillin",
+        "indications": "Treatment of bacterial infections",
+        "side_effects": "Diarrhea, Nausea",
+        "contra_indications": "Allergy to penicillin, Infectious mononucleosis"
+    },
+    {
+        "name": "Coumadin",
+        "active_ingredient": "Warfarin",
+        "indications": "Prevention of blood clots",
+        "side_effects": "Risk of bleeding, Easy bruising",
+        "food_interactions": "Avoid large changes in vitamin K intake, such as leafy greens.",
+        "contra_indications": "Bleeding disorders, High risk of falls"
+    },
+    {
+        "name": "Meloxicam",
+        "active_ingredient": "Mobic",
+        "indications": "Relief of pain, reducing inflammation",
+        "side_effects": "Heartburn, Stomach pain",
+        "contra_indications": "History of allergic reaction to NSAIDs"
+    },
+    {
+        "name": "Estrace",
+        "active_ingredient": "Estradiol",
+        "indications": "Treatment of menopausal symptoms, hormone replacement therapy",
+        "side_effects": "Breast tenderness, Irregular vaginal bleeding",
+        "contra_indications": "Estrogen-dependent tumors, Thrombophlebitis"
+    },
+    {
+        "name": "Pepcid",
+        "active_ingredient": "Famotidine",
+        "indications": "Treatment of peptic ulcers, gastroesophageal reflux disease (GERD)",
+        "side_effects": "Headache, Constipation",
+        "contra_indications": "Allergy to famotidine"
+    },
+    {
+        "name": "Viagra",
+        "active_ingredient": "Sildenafil citrate",
+        "indications": "Treatment of erectile dysfunction, pulmonary arterial hypertension",
+        "side_effects": "Headache, Flushing",
+        "contra_indications": "Nitrates, Hypotension"
+    },
+    {
+        "name": "Desyrel",
+        "active_ingredient": "Trazodone",
+        "indications": "Treatment of depression, insomnia",
+        "side_effects": "Drowsiness, Dry mouth",
+        "contra_indications": "Monoamine oxidase inhibitors (MAOIs)"
+    },
+    {
+        "name": "Ambien",
+        "active_ingredient": "Zolpidem tartrate",
+        "indications": "Treatment of insomnia",
+        "side_effects": "Drowsiness, Dizziness",
+        "food_interactions": "Avoid alcohol.",
+        "contra_indications": "Respiratory depression"
+    },
+    {
+        "name": "Medrol",
+        "active_ingredient": "Methylprednisolone",
+        "indications": "Management of inflammatory and autoimmune conditions",
+        "side_effects": "Weight gain, Insomnia",
+        "food_interactions": "Avoid grapefruit juice, which may increase side effects.",
+        "contra_indications": "Active infections"
+    },
+    {
+        "name": "Cialis",
+        "active_ingredient": "Tadalafil",
+        "indications": "Treatment of erectile dysfunction, benign prostatic hyperplasia",
+        "side_effects": "Headache, Indigestion",
+        "contra_indications": "Nitrates, Hypotension"
+    },
+    {
+        "name": "Robaxin",
+        "active_ingredient": "Methocarbamol",
+        "indications": "Treatment of muscle spasms",
+        "side_effects": "Drowsiness, Dizziness",
+        "contra_indications": "Renal impairment"
+    },
+ 
+    {
+        "name": "Zoloft",
+        "active_ingredient": "Sertraline",
+        "indications": "Treatment of depression, obsessive-compulsive disorder (OCD), panic disorder",
+        "side_effects": "Insomnia, Nausea",
+        "contra_indications": "Monoamine oxidase inhibitors (MAOIs)"
+    },
+    {
+        "name": "Vibramycin",
+        "active_ingredient": "Doxycycline hyclate",
+        "indications": "Treatment of bacterial infections, acne",
+        "side_effects": "Nausea, Diarrhea",
+        "contra_indications": "Pregnancy, Children under 8 years old"
+    },
+
+    {
+        "name": "Vandazole",
+        "active_ingredient": "Metronidazole",
+        "indications": "Treatment of bacterial vaginosis",
+        "side_effects": "Vaginal itching, Burning",
+        "contra_indications": "Alcohol consumption"
+    },
+    {
+        "name": "Freestyle Libre",
+        "active_ingredient": "Freestyle Libre",
+        "indications": "Continuous glucose monitoring system",
+        "side_effects": "Skin irritation at sensor site",
+        "contra_indications": "None"
+    },
+    {
+        "name": "FeroSul",
+        "active_ingredient": "Ferrous sulfate",
+        "indications": "Treatment of iron deficiency anemia",
+        "side_effects": "Constipation, Dark stools",
+        "contra_indications": "Hemochromatosis, Thalassemia"
+    },
+    {
+        "name": "Bactrim",
+        "active_ingredient": "Sulfamethoxazole\/trimethoprim",
+        "indications": "Treatment of bacterial infections",
+        "side_effects": "Nausea, Diarrhea",
+        "contra_indications": "Allergy to sulfa drugs, Megaloblastic anemia"
+    },
+    {
+        "name": "Luminal",
+        "active_ingredient": "Phenobarbital",
+        "indications": "Treatment of seizures, sedation",
+        "side_effects": "Drowsiness, Dizziness",
+        "food_interactions": "Alcohol enhances effects.",
+        "contra_indications": "Respiratory depression, Porphyria"
+    },
+    {
+        "name": "Armour Thyroid",
+        "active_ingredient": "Desiccated thyroid",
+        "indications": "Treatment of hypothyroidism",
+        "side_effects": "Weight loss, Palpitations",
+        "contra_indications": "Thyrotoxicosis, Adrenal insufficiency"
+    },
+    {
+        "name": "Bromfed DM",
+        "active_ingredient": "Bromphen\/pseudoephedrine\/dextromethorphan",
+        "indications": "Relief of cough, congestion",
+        "side_effects": "Drowsiness, Dry mouth",
+        "contra_indications": "MAOIs, Glaucoma"
+    },
+    {
+        "name": "Toprol XL",
+        "active_ingredient": "Metoprolol succinate ER",
+        "indications": "Treatment of high blood pressure, angina, heart failure",
+        "side_effects": "Fatigue, Dizziness",
+        "contra_indications": "Bradycardia"
+    },
+    {
+        "name": "Mobic",
+        "active_ingredient": "Meloxicam",
+        "indications": "Relief of pain, reducing inflammation",
+        "side_effects": "Heartburn, Stomach pain",
+        "contra_indications": "History of allergic reaction to NSAIDs"
+    },
+    {
+        "name": "Protonix",
+        "active_ingredient": "Pantoprazole sodium",
+        "indications": "Treatment of gastroesophageal reflux disease (GERD), gastric ulcers",
+        "side_effects": "Headache, Nausea",
+        "contra_indications": "Allergy to pantoprazole"
+    },
+    {
+        "name": "Zestoretic",
+        "active_ingredient": "Lisinopril\/hydrochlorothiazide",
+        "indications": "Treatment of high blood pressure",
+        "side_effects": "Dizziness, Dry cough",
+        "food_interactions": "Avoid potassium supplements or salt substitutes containing potassium.",
+        "contra_indications": "Pregnancy, Renal artery stenosis"
+    },
+    {
+        "name": "Drisdol",
+        "active_ingredient": "Vitamin D",
+        "indications": "Treatment of vitamin D deficiency",
+        "side_effects": "Nausea, Constipation",
+        "contra_indications": "Hypercalcemia"
+    },
+
+    {
+        "name": "Advil",
+        "active_ingredient": "Ibuprofen",
+        "indications": "Pain relief, reducing inflammation, reducing fever",
+        "side_effects": "Stomach irritation, Ulcers with prolonged use",
+        "contra_indications": "History of stomach ulcers, Asthma"
+    },
+    {
+        "name": "Adderall",
+        "active_ingredient": "Amphetamine\/dextroamphetamine",
+        "indications": "Treatment of attention deficit hyperactivity disorder (ADHD)",
+        "side_effects": "Insomnia, Loss of appetite",
+        "contra_indications": "Glaucoma, Severe anxiety"
+    },
+    {
+        "name": "Ventolin HFA",
+        "active_ingredient": "Albuterol HFA",
+        "indications": "Relief of bronchospasm in asthma and COPD",
+        "side_effects": "Tremor, Tachycardia",
+        "contra_indications": "Severe hypertension, Tachyarrhythmias"
+    },
+    {
+        "name": "Neurontin",
+        "active_ingredient": "Gabapentin",
+        "indications": "Treatment of seizures, nerve pain",
+        "side_effects": "Drowsiness, Dizziness",
+        "contra_indications": "Allergy to gabapentin"
+    },
+    {
+        "name": "Tessalon Perles",
+        "active_ingredient": "Benzonatate",
+        "indications": "Relief of cough",
+        "side_effects": "Drowsiness, Dizziness",
+        "contra_indications": "Respiratory depression, MAOIs"
+    },
+    {
+        "name": "Fexmid",
+        "active_ingredient": "Cyclobenzaprine",
+        "indications": "Treatment of muscle spasms",
+        "side_effects": "Drowsiness, Dry mouth",
+        "contra_indications": "Heart conduction abnormalities, Hyperthyroidism"
+    },
+    {
+        "name": "Zithromax Z-Pak",
+        "active_ingredient": "Azithromycin",
+        "indications": "Treatment of bacterial infections",
+        "side_effects": "Nausea, Diarrhea",
+        "contra_indications": "Allergy to macrolides"
+    },
+    {
+        "name": "Lipitor",
+        "active_ingredient": "Atorvastatin",
+        "indications": "Lowering cholesterol levels",
+        "side_effects": "Muscle pain, liver damage",
+        "food_interactions": "Avoid grapefruit juice, which increases risk of side effects.",
+        "contra_indications": "Liver disease, Pregnancy"
+    },
+    {
+        "name": "Cozaar",
+        "active_ingredient": "Losartan",
+        "indications": "Treatment of high blood pressure, heart failure",
+        "side_effects": "Dizziness, Hypotension",
+        "contra_indications": "Pregnancy"
+    },
+   
+    {
+        "name": "Keflex",
+        "active_ingredient": "Cephalexin",
+        "indications": "Treatment of bacterial infections",
+        "side_effects": "Diarrhea, Nausea",
+        "contra_indications": "Allergy to cephalosporins"
+    },
+    {
+        "name": "Riomet",
+        "active_ingredient": "Metformin",
+        "indications": "Management of type 2 diabetes",
+        "side_effects": "Nausea, Diarrhea",
+        "food_interactions": "Limit alcohol intake to reduce risk of lactic acidosis.",
+        "contra_indications": "Severe kidney disease, Metabolic acidosis"
+    }
+]

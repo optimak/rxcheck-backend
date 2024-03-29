@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Hana Kin",
+        "email": "Kin@gmail.com",
+        "age": 20,
+        "gender": "Male",
+        "password": "pass",
+        "preexisting_conditions": "Severe kidney disease, Metabolic acidosis"
+    }
+]
