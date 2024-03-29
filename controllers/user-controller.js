@@ -13,6 +13,17 @@ const register = async (req, res) => {
     if (!full_name || !email || !password) {
         return res.status(400).send("Please enter the required fields");
     }
+    try {
+        const existingUser = await knex("users").where({"email": email});
+
+
+        if (existingUser){
+            return res.status(400).send("Email already on file");
+        }
+    } catch (error) {
+        console.log(error)
+    }
+   
 
     const hashedPassword = bcrypt.hashSync(password);
 

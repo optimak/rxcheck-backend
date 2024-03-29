@@ -12,10 +12,14 @@ app.get('/', (req, res) => {
   });
 const medRoutes = require('./routes/medication-routes');
 const userRoutes = require('./routes/user-routes');
+const commentRoutes = require('./routes/comment-routes');
 
 // all users routes
 app.use('/medications', medRoutes);
 app.use('/users', userRoutes);
+app.use('/comments', commentRoutes);
+
+
 app.listen(PORT, () => {
   console.log(`running at http://localhost:${PORT}`);
 });

@@ -8,4 +8,8 @@ router
 router
     .route("/search")
     .get(medController.conditionMedications);
+
+// router
+//     .route("/:med_id")
+//     .get(medController.medComments)
 module.exports = router;
