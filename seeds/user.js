@@ -1,6 +1,6 @@
 const userData = require('../seed-data/users.json');
 
-console.log(userData)
+// console.log(userData)
 
 exports.seed = async function(knex) {
   await knex('users').del();

@@ -1,11 +1,13 @@
 const knex = require('knex')(require('../knexfile'));
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 const register = async (req, res) => {
     // POST /auth/register
     // - Creates a new user.
     // - Expected body: { full_name, email, age, gender, password, preexisting_conditions }
     // B444 - Expected body: { first_name, last_name, phone, address, email, password }
+    console.log(req.body)
     const { full_name, email, age, gender, password, preexisting_conditions } = req.body;
 
     if (!full_name || !email || !password) {
