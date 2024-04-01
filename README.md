@@ -30,14 +30,19 @@ Sample Body:
 ?query=*query*
 
 
-To run the app, add a .env file in the form below: 
+To run the app,
+start a mySQL database instance on your computer, create a database, and based on the credentials, add a .env file in the form below: 
 PORT=8080
 DB_HOST=*your database host* like 127.0.0.1
-DB_NAME=*your database name*
+DB_NAME=*your database name* can use rxcheck
 DB_USER=*your database user name*
 DB_PASSWORD=*your database password*
 API_KEY=*api key from open ai will be used in later updates. if any errors kindly sign up on open ai's website https://openai.com/product*
 JWT_KEY=*randomly generated alpha-numeric string of about 30 characters*
 
-then, run  `npm install ` in your terminal after cloning the repository.
-Then run  `npm start`.
+then, 
+- run  `npm install ` in your terminal after cloning the repository.
+- run `npx knex migrate:latest` to run migration files.
+- run `npx knex seed:run` to seed the database .
+
+Then run  `npm start` to start the server.
