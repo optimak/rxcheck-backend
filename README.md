@@ -30,7 +30,7 @@ Sample Body:
 ?query=*query*
 
 
-To use, add an env file in the form below: 
+To run the app, add a .env file in the form below: 
 PORT=8080
 DB_HOST=*your database host* like 127.0.0.1
 DB_NAME=*your database name*
@@ -39,5 +39,5 @@ DB_PASSWORD=*your database password*
 API_KEY=*api key from open ai will be used in later updates. if any errors kindly sign up on open ai's website https://openai.com/product*
 JWT_KEY=*randomly generated alpha-numeric string of about 30 characters*
 
-Then, run  `npm install ` in your terminal after cloning the repository.
+then, run  `npm install ` in your terminal after cloning the repository.
 Then run  `npm start`.
