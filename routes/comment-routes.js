@@ -6,5 +6,7 @@ const medController = require('../controllers/medication-controller');
 router
     .route("/:med_id")
     .get(medController.medComments)
-    .post(medController.addMedComments)
+    .post(medController.addMedComment)
+    .delete(medController.deleteMedComment)
+
 module.exports = router;

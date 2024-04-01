@@ -57,9 +57,11 @@ const medComments = async (req, res) => {
     // const { query } = req.params;
     //  console.log('query',query);
     try {
-        // const synonyms = await expand_query_with_synonyms(query);
+   
         const searchResults = await knex('comments')
-            .where({ medication_id: req.params.med_id });
+            .join('users', 'comments.user_id', '=', 'users.id') 
+            .where({ 'comments.medication_id': req.params.med_id }) 
+            .select('comments.*', 'users.full_name as user_name'); 
 
         console.log(searchResults)
         res.json(searchResults);
@@ -68,16 +70,16 @@ const medComments = async (req, res) => {
     }
 };
 
-const addMedComments = async (req, res) => {
+const addMedComment = async (req, res) => {
     //add comments on a medication
     //receives user_id, medication_id, content) 
     // will add  summary later)
-    // Create the new user
-    const {user_id, medication_id, content} = req.body;
 
-    if (!content ) {
+    const { user_id, medication_id, content } = req.body;
+
+    if (!content) {
         return res.status(400).send("Please enter a comment");
-      }
+    }
     const newComment = {
         user_id,
         medication_id,
@@ -85,23 +87,57 @@ const addMedComments = async (req, res) => {
     };
 
     try {
-        // const synonyms = await expand_query_with_synonyms(query);
+        // const synonyms = await expand_query_with_synonyms(query); USE FOR SUMMARY? OPEN_AI
         ///// ONE MORE THING CHi
         // first check if there's a userid med combo for the user. if yes, do a put/replace in the knex
+        const existingComment = await knex('comments')
+            .where({ medication_id: medication_id, user_id: user_id, content: content });
+        if (existingComment.length) {
+            await knex('comments')
+                .where({ medication_id: medication_id, user_id: user_id, content: content }).del();
+            console.log("deleted extra")
+        }
         await knex('comments')
             .insert(newComment);
 
-        console.log(newComment)
+        console.log(newComment, existingComment)
         res.json(newComment);
     } catch (err) {
         res.status(400).send(`Error sending comment: ${err}`);
     }
 };
-;
+const deleteMedComment = async (req, res) => {
+    //DELETE comment on a medication
+    //receives user_id, medication_id) 
+
+    // const { user_id, medication_id } = req.body;
+
+    const { id } = req.body;
+
+
+    try {
+        // const synonyms = await expand_query_with_synonyms(query);
+        ///// ONE MORE THING CHi
+        // first check if there's a userid med combo for the user. if yes, delete in the knex
+        // const deletedComments = await knex('comments')
+        //     .where({ medication_id: medication_id, user_id: user_id });
+        const deletedComments = await knex('comments')
+            .where({ id: id });
+        if (deletedComments === 0) {
+            return res.status(404).json({ message: "Comment not found" });
+        }
+
+
+        res.sendStatus(204);
+    } catch (err) {
+        res.status(500).send(`Error deleting comment: ${err}`);
+    }
+};
 
 module.exports = {
     index,
     conditionMedications,
     medComments,
-    addMedComments
+    addMedComment,
+    deleteMedComment
 };

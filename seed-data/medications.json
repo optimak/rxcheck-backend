@@ -33,7 +33,7 @@
         "name": "Crestor",
         "active_ingredient": "Rosuvastatin",
         "indications": "Lowering cholesterol levels",
-        "side_effects": "Muscle pain, Rarely, liver damage",
+        "side_effects": "Muscle pain, Rarely liver damage",
         "food_interactions": "Avoid grapefruit juice, which increases risk of side effects.",
         "contra_indications": "Liver disease, Pregnancy"
     },
@@ -41,7 +41,7 @@
         "name": "Zocor",
         "active_ingredient": "Simvastatin",
         "indications": "Lowering cholesterol levels",
-        "side_effects": "Muscle pain, Rarely, liver damage",
+        "side_effects": "Muscle pain, Rarely liver damage",
         "food_interactions": "Avoid grapefruit juice, which increases risk of side effects.",
         "contra_indications": "Liver disease, Pregnancy"
     },
@@ -345,7 +345,7 @@
         "contra_indications": "Monoamine oxidase inhibitors (MAOIs)"
     },
     {
-        "name": "Hydrochlorothiazide",
+        "name": "Hydro chlorothiazide",
         "active_ingredient": "Hydrochlorothiazide",
         "indications": "Treatment of high blood pressure, edema",
         "side_effects": "Dizziness, Electrolyte imbalances",
@@ -577,7 +577,7 @@
     },
     {
         "name": "Bactrim",
-        "active_ingredient": "Sulfamethoxazole\/trimethoprim",
+        "active_ingredient": "Sulfamethoxazole \/trimethoprim",
         "indications": "Treatment of bacterial infections",
         "side_effects": "Nausea, Diarrhea",
         "contra_indications": "Allergy to sulfa drugs, Megaloblastic anemia"
@@ -599,7 +599,7 @@
     },
     {
         "name": "Bromfed DM",
-        "active_ingredient": "Bromphen\/pseudoephedrine\/dextromethorphan",
+        "active_ingredient": "Bromphen \/pseudoephedrine \/dextromethorphan",
         "indications": "Relief of cough, congestion",
         "side_effects": "Drowsiness, Dry mouth",
         "contra_indications": "MAOIs, Glaucoma"
@@ -627,7 +627,7 @@
     },
     {
         "name": "Zestoretic",
-        "active_ingredient": "Lisinopril\/hydrochlorothiazide",
+        "active_ingredient": "Lisinopril \/hydrochlorothiazide",
         "indications": "Treatment of high blood pressure",
         "side_effects": "Dizziness, Dry cough",
         "food_interactions": "Avoid potassium supplements or salt substitutes containing potassium.",
@@ -650,7 +650,7 @@
     },
     {
         "name": "Adderall",
-        "active_ingredient": "Amphetamine\/dextroamphetamine",
+        "active_ingredient": "Amphetamine \/dextroamphetamine",
         "indications": "Treatment of attention deficit hyperactivity disorder (ADHD)",
         "side_effects": "Insomnia, Loss of appetite",
         "contra_indications": "Glaucoma, Severe anxiety"
