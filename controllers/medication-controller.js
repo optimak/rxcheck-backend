@@ -57,11 +57,11 @@ const medComments = async (req, res) => {
     // const { query } = req.params;
     //  console.log('query',query);
     try {
-   
+
         const searchResults = await knex('comments')
-            .join('users', 'comments.user_id', '=', 'users.id') 
-            .where({ 'comments.medication_id': req.params.med_id }) 
-            .select('comments.*', 'users.full_name as user_name'); 
+            .join('users', 'comments.user_id', '=', 'users.id')
+            .where({ 'comments.medication_id': req.params.med_id })
+            .select('comments.*', 'users.full_name as user_name');
 
         console.log(searchResults)
         res.json(searchResults);
@@ -111,8 +111,8 @@ const deleteMedComment = async (req, res) => {
     //receives user_id, medication_id) 
 
     // const { user_id, medication_id } = req.body;
-
-    const { id } = req.body;
+    // console.log(req.params)
+    const { comment_id } = req.params;
 
 
     try {
@@ -122,8 +122,10 @@ const deleteMedComment = async (req, res) => {
         // const deletedComments = await knex('comments')
         //     .where({ medication_id: medication_id, user_id: user_id });
         const deletedComments = await knex('comments')
-            .where({ id: id });
-        if (deletedComments === 0) {
+            .where({ 'id': comment_id })
+            .del();
+        console.log(deletedComments)
+        if (deletedComments.length === 0) {
             return res.status(404).json({ message: "Comment not found" });
         }
 

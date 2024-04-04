@@ -30,7 +30,7 @@ const register = async (req, res) => {
             const newUser = {
                 full_name,
                 email,
-                age: isNaN(Number(age)) ? 0 :Number(age) ,
+                age: isNaN(Number(age)) ? 0 : Number(age),
                 gender,
                 password: hashedPassword,
                 preexisting_conditions
@@ -101,7 +101,7 @@ const login = async (req, res) => {
 
     // Generate a token
     const token = jwt.sign(
-        { id: user.id, email: user.email, full_name: user.full_name},
+        { id: user.id, email: user.email, full_name: user.full_name },
         process.env.JWT_KEY,
         { expiresIn: "8h" }
     );
@@ -137,11 +137,87 @@ const getProfile = async (req, res) => {
 
 
 
+const userMeds = async (req, res) => {
+    //get comments on a medication
+    const { user_id } = req.params;
+    //  console.log('query',query);
+    try {
+
+        const searchResults = await knex('users_medications')
+            .join('medications', 'medications.id', '=', 'users_medications.medication_id')
+            .where({ 'users_medications.user_id': req.params.user_id })
+            .select('users_medications.user_id','medications.*', 'medications.id as medication_id');
+
+        console.log(searchResults)
+        res.json(searchResults);
+    } catch (err) {
+        res.status(400).send(`Error retrieving user meds: ${err}`);
+    }
+};
+
+const addUserMeds = async (req, res) => {
+    //add comments on a medication
+    //receives user_id, medication_id, content) 
+    // will add  summary later)
+    const { user_id } = req.params;
+    const {  medication_id } = req.body;
+
+    // if (!content) {
+    //     return res.status(400).send("Please enter a comment");
+    // }
+    const newUserMed = {
+        user_id,
+        medication_id,
+
+    };
+
+    try {
+        // const synonyms = await expand_query_with_synonyms(query); USE FOR SUMMARY? OPEN_AI
+        ///// ONE MORE THING CHi
+        // first check if there's a userid med combo for the user. if yes, do a put/replace in the knex
+        const existingUserMed = await knex('users_medications')
+            .where({ medication_id: medication_id, user_id: user_id });
+        if (existingUserMed.length) {
+            await knex('users_medications')
+                .where({ medication_id: medication_id, user_id: user_id }).del();
+            console.log("deleted extra")
+        }
+        await knex('users_medications')
+            .insert(newUserMed);
+
+        console.log(newUserMed, existingUserMed)
+        res.json(newUserMed);
+    } catch (err) {
+        res.status(400).send(`Error sending comment: ${err}`);
+    }
+};
 
 
 
+const deleteUserMeds = async (req, res) => {
+    //DELETE users med on a medication
+  
+    const { user_id, med_id } = req.params;
+    // const { medication_id : med_id } = req.body;
 
 
+    try {
+
+        const deletedUserMeds = await knex('users_medications')
+            .where({ 'medication_id': med_id,'user_id': user_id })
+            .del();
+        console.log(deletedUserMeds)
+        if (deletedUserMeds === 0) {
+            console.log(deletedUserMeds)
+            return res.status(404).json({ message: "User Med not found" });
+        }
+
+
+        res.sendStatus(204);
+    } catch (err) {
+        res.status(500).send(`Error deleting comment: ${err}`);
+    }
+};
 
 
 
@@ -188,5 +264,8 @@ module.exports = {
     register,
     login,
     getProfile,
+    userMeds,
+    addUserMeds,
+    deleteUserMeds
 
 };

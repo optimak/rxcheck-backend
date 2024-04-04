@@ -11,7 +11,16 @@ router
 router
   .route("/login")
   .post(userController.login);
-  
+
+router
+  .route("/:user_id/meds")
+  .get(userController.userMeds)
+  .post(userController.addUserMeds);
+
+router
+  .route("/:user_id/meds/:med_id")
+  .delete(userController.deleteUserMeds)
+
 
 
 
