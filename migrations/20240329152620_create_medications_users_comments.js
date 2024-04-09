@@ -28,7 +28,6 @@ exports.up = function(knex) {
     .createTable("comments", (table) => {
         table.increments('id').primary();
         table.string("content", 1000).notNullable();
-        // table.integer("likes").notNullable().defaultTo(0);
         table
           .integer("user_id")
           .unsigned()
