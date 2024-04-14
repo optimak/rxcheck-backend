@@ -1,10 +1,146 @@
 [
     {
+        "id": "1",
         "full_name": "Test Name",
         "email": "sthng@gmail.com",
-        "age": 20,
+        "age": "20",
         "gender": "Male",
         "password": "pass",
         "preexisting_conditions": "Severe kidney disease, Metabolic acidosis"
+    },
+    {
+        "id": "2",
+        "full_name": "Chi Aghaizu",
+        "email": "ecconed@gmail.com",
+        "age": "45",
+        "gender": "fem",
+        "password": "$2a$10$vLoOmGGQIsTBk/v5QFvc0erhN4zoIRzfK6pe.kbbs2mInLDQpMKdG",
+        "preexisting_conditions": "none"
+    },
+    {
+        "id": "3",
+        "full_name": "Maria Ahaizu",
+        "email": "chimaghaizu@gmail.com",
+        "age": "30",
+        "gender": "female",
+        "password": "$2a$10$AnjZNcZi.ESpy.YAJsKGSuhV802GjE5xjjKYqGpMFc7eZZNjX/c.S",
+        "preexisting_conditions": "none"
+    },
+    {
+        "id": "4",
+        "full_name": "ecco",
+        "email": "ecco mane",
+        "age": "45",
+        "gender": "female",
+        "password": "$2a$10$J8ozTslsRtncxUHholM6ouHZBDzRYFI2iufSxCZvVcWaDarUh8Or2",
+        "preexisting_conditions": "none"
+    },
+    {
+        "id": "5",
+        "full_name": "gigg",
+        "email": "cho",
+        "age": "0",
+        "gender": "",
+        "password": "$2a$10$Hou149qOOlbRlllqbgW5nu4vivxZLzOyPf8TtPtnVhvAzloUM8jUm",
+        "preexisting_conditions": "none"
+    },
+    {
+        "id": "6",
+        "full_name": "full n",
+        "email": "edd",
+        "age": "0",
+        "gender": "",
+        "password": "$2a$10$WxS23VCKHx.FLGBMuJAP/uejUjUS9QhXLiM95.4Gb8b0o7REK8Z.q",
+        "preexisting_conditions": "none"
+    },
+    {
+        "id": "7",
+        "full_name": "full n",
+        "email": "chiamaka.aghaizu@massbiologics.org",
+        "age": "45",
+        "gender": "female",
+        "password": "$2a$10$iTy9XMdim5EBsX8WHQ8fYuU6mkilHE7iM7vILxo4ypXC4asU7MyyW",
+        "preexisting_conditions": "none"
+    },
+    {
+        "id": "8",
+        "full_name": "INII",
+        "email": "valid",
+        "age": "45",
+        "gender": "",
+        "password": "$2a$10$is/5YqLvn1aTDzUblwWMn.FgrR1kPl.l9shUCjcbu0FT9Hmmm/HA2",
+        "preexisting_conditions": "none"
+    },
+    {
+        "id": "9",
+        "full_name": "wiii",
+        "email": "vali",
+        "age": "45",
+        "gender": "",
+        "password": "$2a$10$cdNdZ8n.IuN/A7NcQ2uTfeJf0AJY/ShZTiholsgRzbuk8hcGc7Cpy",
+        "preexisting_conditions": "Heart Conditions"
+    },
+    {
+        "id": "10",
+        "full_name": "Chiamaka M Aghaizu",
+        "email": "chiamaka.aghaizu@blackkidscode.com",
+        "age": "0",
+        "gender": "female",
+        "password": "$2a$10$KujT2CdfNA7M24R93tkBNeC2Inm4HNMRov0d6yml8A3WiXHlZulIa",
+        "preexisting_conditions": "none"
+    },
+    {
+        "id": "11",
+        "full_name": "inimicus",
+        "email": "validemail",
+        "age": "45",
+        "gender": "",
+        "password": "$2a$10$VfPYp16ze9mpJ1tRrcGrF.9KwvCuNu4mVL7rgqd6RN8vPokdcsbSq",
+        "preexisting_conditions": "Allergies and Sensitivities"
+    },
+    {
+        "id": "12",
+        "full_name": "1",
+        "email": "1",
+        "age": "0",
+        "gender": "",
+        "password": "$2a$10$291vKYwgDvnyYS1ALFAny.s5yG4w7L9UuqI6vFsaavCNkZKYj3neu",
+        "preexisting_conditions": "Kidney Disease"
+    },
+    {
+        "id": "13",
+        "full_name": "2",
+        "email": "2",
+        "age": "0",
+        "gender": "",
+        "password": "$2a$10$b2qNamBvE78LO2PDfWOpSOou7y5xIud5v4JgcG6dCDvDSN9Xk5/Oi",
+        "preexisting_conditions": "Liver Disease"
+    },
+    {
+        "id": "14",
+        "full_name": "3",
+        "email": "3",
+        "age": "0",
+        "gender": "",
+        "password": "$2a$10$oHycKpxMkr9eyY2v5jGSeux9cDJkqxU3K69W8DAnFrJm4tmPB1kEa",
+        "preexisting_conditions": "Heart Conditions"
+    },
+    {
+        "id": "15",
+        "full_name": "Romaine Lettuce",
+        "email": "romaine@gmail.com",
+        "age": "45",
+        "gender": "male",
+        "password": "$2a$10$9HEAXZCUTFfw8UO5jBQnhO0oJMW8fbGYtvslao5yQn4YfnucvNo32",
+        "preexisting_conditions": "Liver Disease"
+    },
+    {
+        "id": "16",
+        "full_name": "Romaine Lettuce",
+        "email": "romaineL@gmail.com",
+        "age": "45",
+        "gender": "male",
+        "password": "$2a$10$hg9q4f1GdZ9rLm6Yj5KlZ.bZ/E0Y03yv/1s1ZR1K7lAfvYlwY.d.y",
+        "preexisting_conditions": "Liver Disease"
     }
 ]

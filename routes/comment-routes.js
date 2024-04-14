@@ -9,5 +9,6 @@ router
     .post(medController.addMedComment)
 router.route("/:comment_id")
     .delete(medController.deleteMedComment)
-
+router.route("/all/:user_id")
+    .get(medController.comments)
 module.exports = router;
