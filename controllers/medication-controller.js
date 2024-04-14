@@ -27,9 +27,24 @@ const conditionMedications = async (req, res) => {
     }
 };
 
+const comments = async (req, res) => {
+    //get comments for a user
+
+    try {
+
+        const searchResults = await knex('comments')
+            .join('users', 'comments.user_id', '=', 'users.id')
+            .join('medications', 'comments.medication_id', '=', 'medications.id')
+            .where({ 'comments.user_id': req.params.user_id })
+        .select('comments.*', 'users.full_name as user_name','medications.name as med_name')
+        res.json(searchResults);
+    } catch (err) {
+        res.status(400).send(`Error retrieving user comments: ${err}`);
+    }
+};
 const medComments = async (req, res) => {
     //get comments on a medication
-  
+
     try {
 
         const searchResults = await knex('comments')
@@ -79,12 +94,12 @@ const deleteMedComment = async (req, res) => {
     //DELETE comment on a medication
     //receives comment_id) 
 
-  
+
     const { comment_id } = req.params;
 
 
     try {
-      
+
         const deletedComments = await knex('comments')
             .where({ 'id': comment_id })
             .del();
@@ -102,6 +117,7 @@ const deleteMedComment = async (req, res) => {
 module.exports = {
     index,
     conditionMedications,
+    comments,
     medComments,
     addMedComment,
     deleteMedComment

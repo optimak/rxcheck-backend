@@ -12,7 +12,12 @@ exports.up = function(knex) {
         table.string("gender").notNullable().defaultTo('other');
         table.string("password").notNullable();
         table.string("preexisting_conditions").notNullable().defaultTo('none');
-       
+        table
+        .timestamp("created_at")
+        .defaultTo(knex.raw("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"));
+        table
+        .string("last_login").defaultTo('');
+           
     })
     .createTable("medications", (table) => {
         table.increments('id').primary();

@@ -99,11 +99,24 @@ const getProfile = async (req, res) => {
 
     // Verify the token
     try {
+        const currentTimestamp = new Date().toISOString();
         const decodedToken = jwt.verify(authToken, process.env.JWT_KEY);
+        const issuedAt = new Date(decodedToken.iat * 1000);
+        //update llast login to this one, issued_at where user_id == this
+       
 
         // Respond with the appropriate user data
         const user = await knex("users").where({ id: decodedToken.id }).first();
         delete user.password;
+        await knex('users')
+        .where({ id: decodedToken.id })
+        .update({
+          last_login: currentTimestamp
+        });
+       
+
+        // Update the last_login column for the user with id = 4
+        
         res.send(user);
     } catch (error) {
         res.status(401).send("Invalid auth token");
