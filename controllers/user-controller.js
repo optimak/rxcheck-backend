@@ -48,32 +48,71 @@ const bcrypt = require("bcryptjs");
 
 // };
 
-const register = async (req, res) => {
-    // POST /auth/register
-    // Expected body: { full_name, email, age, gender, password, preexisting_conditions }
+// const register = async (req, res) => {
+//     // POST /auth/register
+//     // Expected body: { full_name, email, age, gender, password, preexisting_conditions }
 
+//     const { full_name, email, age, gender, password, preexisting_conditions } = req.body;
+
+//     // Check for required fields
+//     if (!full_name || !email || !password) {
+//         return res.status(400).send("Please enter the required fields");
+//     }
+
+//     try {
+//         // Check if user exists in Supabase Auth
+//         const { data: existingUser } = await supabase.auth.signInWithPassword({ email, password });
+//         if (existingUser) {
+//             return res.status(400).send("Email already on file");
+//         }
+
+//         // Register user in Supabase Auth for authentication
+//         const { error, data } = await supabase.auth.signUp({
+//             email,
+//             password,
+//         });
+
+//         if (error) {
+//             return res.status(400).send("Failed to register user in Supabase Auth");
+//         }
+
+//         // Prepare the additional fields for your database
+//         const newUser = {
+//             full_name,
+//             email,
+//             age: isNaN(Number(age)) ? 0 : Number(age),
+//             gender,
+//             password: bcrypt.hashSync(password),  // Hash the password for additional security
+//             preexisting_conditions,
+//         };
+
+//         // Insert the additional profile data into the users table in your database
+//         await knex("users").insert(newUser);
+
+//         // Respond with a success message
+//         res.status(201).send("Registered successfully and profile created");
+//     } catch (error) {
+//         res.status(400).send("Failed registration");
+//     }
+// };
+
+const register = async (req, res) => {
     const { full_name, email, age, gender, password, preexisting_conditions } = req.body;
 
-    // Check for required fields
     if (!full_name || !email || !password) {
         return res.status(400).send("Please enter the required fields");
     }
 
     try {
-        // Check if user exists in Supabase Auth
-        const { data: existingUser } = await supabase.auth.signInWithPassword({ email, password });
-        if (existingUser) {
-            return res.status(400).send("Email already on file");
-        }
-
-        // Register user in Supabase Auth for authentication
+        // Register user in Supabase Auth
         const { error, data } = await supabase.auth.signUp({
             email,
             password,
         });
 
         if (error) {
-            return res.status(400).send("Failed to register user in Supabase Auth");
+            console.error("Supabase Error:", error);  // Log the error for debugging
+            return res.status(400).send(`Failed to register user: ${error.message}`);
         }
 
         // Prepare the additional fields for your database
@@ -82,19 +121,20 @@ const register = async (req, res) => {
             email,
             age: isNaN(Number(age)) ? 0 : Number(age),
             gender,
-            password: bcrypt.hashSync(password),  // Hash the password for additional security
+            password: bcrypt.hashSync(password),  // Hash password
             preexisting_conditions,
         };
 
-        // Insert the additional profile data into the users table in your database
+        // Insert additional profile data into your users table
         await knex("users").insert(newUser);
-
-        // Respond with a success message
         res.status(201).send("Registered successfully and profile created");
     } catch (error) {
+        console.error("Database Error:", error);  // Log database error
         res.status(400).send("Failed registration");
     }
 };
+
+
 
 
 const login = async (req, res) => {
