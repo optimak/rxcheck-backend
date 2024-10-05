@@ -19,6 +19,7 @@ exports.up = function (knex) {
         .string("last_login").defaultTo('');
 
     })
+    
     .createTable("medications", (table) => {
       table.increments('id').primary();
       table.string("name").notNullable();

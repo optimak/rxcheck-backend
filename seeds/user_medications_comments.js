@@ -13,5 +13,7 @@ exports.seed = async function(knex) {
   await knex('medications').insert(medData);
   await knex('users_medications').insert(userMedData);
   await knex('comments').insert(commentData);
+  // Reset the id sequence after seeding
+  await knex.raw(`SELECT setval(pg_get_serial_sequence('users', 'id'), COALESCE(MAX(id)+1, 1), false) FROM users;`);
 
 };

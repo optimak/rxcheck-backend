@@ -7,7 +7,7 @@ const { spawn } = require('child_process');
 
 const index = async (_req, res) => {
     try {
-        const data = await knex("medications");
+        const data = await knex("public.medications");
         res.status(200).json(data);
     } catch (err) {
         res.status(400).send(`Error retrieving medications: ${err}`);
@@ -32,11 +32,11 @@ const comments = async (req, res) => {
 
     try {
 
-        const searchResults = await knex('comments')
+        const searchResults = await knex('public.comments')
             .join('users', 'comments.user_id', '=', 'users.id')
             .join('medications', 'comments.medication_id', '=', 'medications.id')
             .where({ 'comments.user_id': req.params.user_id })
-        .select('comments.*', 'users.full_name as user_name','medications.name as med_name')
+        .select('public.comments.*', 'public.users.full_name as user_name','public.medications.name as med_name')
         res.json(searchResults);
     } catch (err) {
         res.status(400).send(`Error retrieving user comments: ${err}`);
