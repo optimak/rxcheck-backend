@@ -96,8 +96,10 @@ const { createClient } = require('@supabase/supabase-js');
 //         res.status(400).send("Failed registration");
 //     }
 // };
+const supabaseKey = process.env.SUPABASE_KEY
+const supabaseUrl = process.env.SUPABASE_URL
 
-const supabase = createClient('http://localhost:54321', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJheWRhY3lmdGF4amFyanp3aGp1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNzE5NTgyMywiZXhwIjoyMDQyNzcxODIzfQ.SqUa56IKSpQs0Zy7JMSYyslP2Lv8m8tiGM2sNgR-tn8'); // Use service key in backend
+const supabase = createClient(supabaseUrl, supabaseKey); // Use service key in backend
 
 const register = async (req, res) => {
     const { full_name, email, age, gender, password, preexisting_conditions } = req.body;
