@@ -1,6 +1,7 @@
 const knex = require('knex')(require('../knexfile'));
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const { createClient } = require('@supabase/supabase-js');
 
 // const register = async (req, res) => {
 //     // POST /auth/register
@@ -38,7 +39,7 @@ const bcrypt = require("bcryptjs");
 //             await knex("users").insert(newUser);
 //             res.status(201).send("Registered successfully");
 
-       
+
 //         } catch (error) {
 //             res.status(400).send("Failed registration");
 //         }
@@ -96,6 +97,8 @@ const bcrypt = require("bcryptjs");
 //     }
 // };
 
+const supabase = createClient('http://localhost:54321', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJheWRhY3lmdGF4amFyanp3aGp1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyNzE5NTgyMywiZXhwIjoyMDQyNzcxODIzfQ.SqUa56IKSpQs0Zy7JMSYyslP2Lv8m8tiGM2sNgR-tn8'); // Use service key in backend
+
 const register = async (req, res) => {
     const { full_name, email, age, gender, password, preexisting_conditions } = req.body;
 
@@ -105,16 +108,28 @@ const register = async (req, res) => {
 
     try {
         // Register user in Supabase Auth
-        const { error, data } = await supabase.auth.signUp({
-            email,
-            password,
-        });
+        // const { error, data } = await supabase.auth.signUp({
+        //     email,
+        //     password,
+        // });
 
-        if (error) {
-            console.error("Supabase Error:", error);  // Log the error for debugging
-            return res.status(400).send(`Failed to register user: ${error.message}`);
+        // if (error) {
+        //     console.error("Supabase Error:", error);  // Log the error for debugging
+        //     return res.status(400).send(`Failed to register user: ${error.message}`);
+        // }
+        const existingUser = await knex("public.users").where({ email }).first();
+        if (existingUser) {
+            return res.status(400).send("User with this email already exists");
         }
 
+        const { user, error: signUpError } = await supabase.auth.signUp({
+            email,
+            password
+        });
+
+        if (signUpError) {
+            return res.status(400).json({ error: signUpError.message });
+        }
         // Prepare the additional fields for your database
         const newUser = {
             full_name,
@@ -126,7 +141,7 @@ const register = async (req, res) => {
         };
 
         // Insert additional profile data into your users table
-        await knex("users").insert(newUser);
+        await knex("public.users").insert(newUser);
         res.status(201).send("Registered successfully and profile created");
     } catch (error) {
         console.error("Database Error:", error);  // Log database error
@@ -150,7 +165,7 @@ const login = async (req, res) => {
     }
 
     // Find the user
-    const user = await knex("users").where({ email: email }).first();
+    const user = await knex("public.users").where({ email: email }).first();
     if (!user) {
         return res.status(400).send("Email Address doesn't exist. Sign Up");
     }
@@ -190,20 +205,20 @@ const getProfile = async (req, res) => {
         const decodedToken = jwt.verify(authToken, process.env.JWT_KEY);
         const issuedAt = new Date(decodedToken.iat * 1000);
         //update llast login to this one, issued_at where user_id == this
-       
+
 
         // Respond with the appropriate user data
-        const user = await knex("users").where({ id: decodedToken.id }).first();
+        const user = await knex("public.users").where({ id: decodedToken.id }).first();
         delete user.password;
-        await knex('users')
-        .where({ id: decodedToken.id })
-        .update({
-          last_login: currentTimestamp
-        });
-       
+        await knex('public.users')
+            .where({ id: decodedToken.id })
+            .update({
+                last_login: currentTimestamp
+            });
+
 
         // Update the last_login column for the user with id = 4
-        
+
         res.send(user);
     } catch (error) {
         res.status(401).send("Invalid auth token");
@@ -217,10 +232,10 @@ const userMeds = async (req, res) => {
     const { user_id } = req.params;
     try {
 
-        const searchResults = await knex('users_medications')
-            .join('medications', 'medications.id', '=', 'users_medications.medication_id')
-            .where({ 'users_medications.user_id': req.params.user_id })
-            .select('users_medications.user_id','medications.*', 'medications.id as medication_id');
+        const searchResults = await knex('public.users_medications')
+            .join('public.medications', 'public.medications.id', '=', 'public.users_medications.medication_id')
+            .where({ 'public.users_medications.user_id': req.params.user_id })
+            .select('public.users_medications.user_id', 'public.medications.*', 'medications.id as medication_id');
 
         res.json(searchResults);
     } catch (err) {
@@ -233,9 +248,9 @@ const addUserMeds = async (req, res) => {
     //receives user_id, medication_id, content) 
     // will add  summary later)
     const { user_id } = req.params;
-    const {  medication_id } = req.body;
+    const { medication_id } = req.body;
 
-    
+
     const newUserMed = {
         user_id,
         medication_id,
@@ -243,14 +258,14 @@ const addUserMeds = async (req, res) => {
     };
 
     try {
-      
-        const existingUserMed = await knex('users_medications')
+
+        const existingUserMed = await knex('public.users_medications')
             .where({ medication_id: medication_id, user_id: user_id });
         if (existingUserMed.length) {
-            await knex('users_medications')
+            await knex('public.users_medications')
                 .where({ medication_id: medication_id, user_id: user_id }).del();
         }
-        await knex('users_medications')
+        await knex('public.users_medications')
             .insert(newUserMed);
 
         res.json(newUserMed);
@@ -263,14 +278,14 @@ const addUserMeds = async (req, res) => {
 
 const deleteUserMeds = async (req, res) => {
     //DELETE users med on a medication
-  
+
     const { user_id, med_id } = req.params;
 
 
     try {
 
-        const deletedUserMeds = await knex('users_medications')
-            .where({ 'medication_id': med_id,'user_id': user_id })
+        const deletedUserMeds = await knex('public.users_medications')
+            .where({ 'medication_id': med_id, 'user_id': user_id })
             .del();
         if (deletedUserMeds === 0) {
             return res.status(404).json({ message: "User Med not found" });
