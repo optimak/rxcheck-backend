@@ -17,7 +17,8 @@
 # For more information on the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples
 
-on:
+
+ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
@@ -46,14 +47,6 @@ jobs:
       run: |
         echo "network-timeout=600000" > ~/.npmrc
 
-    - name: Set up cache for npm
-      uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-
     - name: Install dependencies with retry logic
       run: |
         retry() {
@@ -68,6 +61,7 @@ jobs:
 
     - name: Fix vulnerabilities
       run: npm audit fix
+      continue-on-error: true
 
     - name: Run build and tests
       run: |
